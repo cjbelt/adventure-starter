@@ -44,12 +44,24 @@ class Room {
     }
 
     getItemByName(name) {
+        let result = this.items.reduce((accum, item) => {
+            if (item.name === name) {
+                return item;
+            }
 
-        // Fill this in
+            return accum;
+        });
+
+        return result;
     }
 
+    removeItem(itemName) {
+        const item = this.getItemByName(itemName);
+        const index = this.items.indexOf(item);
+        this.items = this.items.slice(0, index).concat(this.items.slice(index + 1));
+    }
 }
 
 module.exports = {
-  Room,
+  Room
 };

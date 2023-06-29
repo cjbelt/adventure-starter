@@ -22,13 +22,19 @@ module.exports = {
             id: 4,
             name: "Western point",
             description: "You are standing at the west point of a crossroad. To the east, you see an empty intersection.",
-            exits: {e: 1}
+            exits: {e: 1, w: 6}
         },
         {
             id: 5,
             name: "Southern point",
             description: "You are standing at the south point of a crossroad. To the north, you see an empty intersection.",
             exits: {n: 1}
+        },
+        {
+            id: 6,
+            name: "Beach",
+            description: "You are standing at a beach, with a wonderful vision! At the east, you see a crossroad point.",
+            exits: {e: 4}
         }
     ],
     items: [
@@ -42,6 +48,21 @@ module.exports = {
             description: "A tasty looking sandwich",
             room: 2,
             isFood: true
+        },
+        {
+            name: "scissors",
+            description: "A sharp scissors",
+            room: 4
+        },
+        {
+            name: "paper",
+            description: "A white paper",
+            room: 3
+        },
+        {
+            name: "shell",
+            description: "a beautiful shell",
+            room: 6
         }
     ]
 }
